@@ -38,7 +38,7 @@ body{
 
 .maincard{
   width: 250px;
-  min-height: 30vh;
+  height: 30vh;
   background:hsl(300, 43%, 22%);
   border-radius: 8px;
 
@@ -122,9 +122,10 @@ img{
  .review_div2{
   padding-left: 55px;
  }
- 
 
 .top_container{
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   gap: 7rem;
 }
@@ -152,27 +153,29 @@ a{
 }
 
 @media screen and (max-width : 414px) {
-  .top_container{
+.top_container{
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-  .cards{
+
+.cards{
     display: flex;
     flex-direction: column;
   }
-  .general_container{
+.general_container{
     width: 30%;
-    min-height: 100vh;
+    height: 100px;
     padding: 40px;
+    /* scroll-behavior: smooth; */
     }
-  .review_div1{
+.review_div1{
       padding-left: 0px;
      }
-  .review_div2{
+.review_div2{
       padding-left: 0px;
      }
-     .top_card_main{
+.top_card_main{
       width: 150px;
       min-height: 20vh;
       background:transparent;
@@ -180,7 +183,7 @@ a{
       text-align: center;
     }
  
-    .review_star{
+.review_star{
       width: 170px;
       height: 4vh;
       background-color: hsl(300, 18%, 87%);
@@ -190,15 +193,15 @@ a{
       padding: 20px;   
     }
 
-    .p_review_img{
+.p_review_img{
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
     }
 
-  .maincard{
+.maincard{
       width: 250px;
-      min-height: 15vh;
+      min-height: 20vh;
       background:hsl(300, 43%, 22%);
       border-radius: 8px;
     }
