@@ -160,12 +160,11 @@ a{
   .cards{
     display: flex;
     flex-direction: column;
-    gap: 3rem;
   }
   .general_container{
-    width: 10px;
-    height: 50vh;
-    padding: 20px;
+    width: 30%;
+    min-height: 100vh;
+    padding: 40px;
     }
   .review_div1{
       padding-left: 0px;
@@ -183,14 +182,29 @@ a{
  
     .review_star{
       width: 170px;
-      height: 3vh;
+      height: 4vh;
       background-color: hsl(300, 18%, 87%);
       border-radius: 5px;
       display: flex;
       flex-direction: column;
-      /* gap: 1rem; */
       padding: 20px;   
     }
 
+    .p_review_img{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+  .maincard{
+      width: 250px;
+      min-height: 15vh;
+      background:hsl(300, 43%, 22%);
+      border-radius: 8px;
+    }
+
+    footer{
+      display: none;
+    }
 
 }
