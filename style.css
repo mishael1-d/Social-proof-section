@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: 0;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
 }
 
-body{
-    background-color: whitesmoke;
-    background-image: url(./images/bg-pattern-bottom-desktop.svg);
-    background-position: right -150px bottom -750px;
-    background-repeat: no-repeat;
-    position: fixed;
+body {
+  background-color: whitesmoke;
+  background-image: url(./images/bg-pattern-bottom-desktop.svg);
+  background-position: right -150px bottom -750px;
+  background-repeat: no-repeat;
+  position: fixed;
+  /* This will not make your page scrollale on mobile view*/
 }
+
+/* There's a better implementation for styling the background, this approach is not advisable */
 
 .wrapper::before {
   content: "";
@@ -21,14 +24,15 @@ body{
   height: 100vh;
   background-repeat: no-repeat;
 }
+
 .wrapper:before {
   background-image: url(./images/bg-pattern-top-desktop.svg);
   background-position: left 80px top -100px;
- position: fixed;
+  position: fixed;
 }
 
 
-.cards{
+.cards {
   width: 100%;
   height: 35vh;
   gap: 1.3rem;
@@ -36,178 +40,201 @@ body{
   padding-top: 18px;
 }
 
-.maincard{
+.maincard {
   width: 250px;
   height: 30vh;
-  background:hsl(300, 43%, 22%);
+  background: hsl(300, 43%, 22%);
   border-radius: 8px;
 
 }
 
-img{
+img {
   border-radius: 35px;
 }
 
-.p1{
+.p1 {
   color: hsl(0, 0%, 100%);
   font-size: 15px;
   font-weight: bold;
 }
 
-.p2{
+.p2 {
   color: hsl(333, 80%, 67%);
   font-size: 15px;
   font-weight: bold;
 }
-.p_main{
+
+.p_main {
   color: hsl(0, 0%, 100%);
   font-size: 12px;
   line-height: 1.5;
   padding-top: 17px;
 }
-.card_top_content{
+
+.card_top_content {
   display: flex;
   gap: 1rem;
 }
 
-.in_card_content{
+.in_card_content {
   padding: 10%;
 }
 
-.top_card_main{
+.top_card_main {
   width: 250px;
   min-height: 30vh;
-  background:transparent;
+  background: transparent;
 }
 
-.p_top{
+.p_top {
   color: hsl(300, 43%, 22%);
 }
 
-.p_top1{
-  color:hsl(303, 10%, 53%);
+.p_top1 {
+  color: hsl(303, 10%, 53%);
   font-size: 13px;
   padding-top: 15px;
 }
 
-.review_star{
-  min-width: 5px;
-  height: 2vh;
+.review_star {
+  /* min-width: 5px; this is not necessary */
+  /* height: 2vh; this is not necessary */
   background-color: hsl(300, 18%, 87%);
   border-radius: 5px;
   padding: 10px;
 }
 
-.p_review{
+.p_review {
   color: hsl(300, 43%, 22%);
   font-weight: bold;
   font-size: small;
 }
-.p_review_img{
+
+.p_review_img {
   display: flex;
   gap: 0.5rem;
 }
 
-.review_div{
- display:flex;
- flex-direction: column;
- gap: 0.7rem;
+.review_div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
-.review_div1{
+.review_div1 {
   padding-left: 30px;
- }
+}
 
- 
- .review_div2{
+
+.review_div2 {
   padding-left: 55px;
- }
+}
 
-.top_container{
+.top_container {
+  /* Since padding top & bottom have same value you can use this shorthand version instead
+  padding: 20px 0; and remove the two code below.
+  */
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
-  gap: 7rem;
+  gap: 7rem; /* you can remove this code and insert this 
+  justify-content: space-between;
+  */
 }
 
-.container_maincard1{
+.container_maincard1 {
   padding-top: 35px;
 }
 
-.container_maincard2{
+.container_maincard2 {
   padding-top: 50px;
 }
 
-.general_container{
-padding-left: 200px;
-padding-top: 70px;
+.general_container {
+  padding-left: 200px;
+  padding-top: 70px;
 }
-footer{
+
+footer {
   font-size: small;
   text-align: center;
   padding-top: 30px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 @media screen and (max-width : 414px) {
-.top_container{
+  .top_container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 
-.cards{
+  .cards {
     display: flex;
     flex-direction: column;
   }
-.general_container{
+
+  .general_container {
     width: 30%;
     height: 100px;
     padding: 40px;
     /* scroll-behavior: smooth; */
-    }
-.review_div1{
-      padding-left: 0px;
-     }
-.review_div2{
-      padding-left: 0px;
-     }
-.top_card_main{
-      width: 150px;
-      min-height: 20vh;
-      background:transparent;
-      font-size: small;
-      text-align: center;
-    }
- 
-.review_star{
-      width: 170px;
-      height: 4vh;
-      background-color: hsl(300, 18%, 87%);
-      border-radius: 5px;
-      display: flex;
-      flex-direction: column;
-      padding: 20px;   
-    }
+  }
 
-.p_review_img{
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
+  .review_div1 {
+    padding-left: 0px;
+  }
 
-.maincard{
-      width: 250px;
-      min-height: 20vh;
-      background:hsl(300, 43%, 22%);
-      border-radius: 8px;
-    }
+  .review_div2 {
+    padding-left: 0px;
+  }
 
-    footer{
-      display: none;
-    }
+  .top_card_main {
+    width: 150px;
+    /* min-height: 20vh; you can take out this line of code */
+    background: transparent;
+    font-size: small;
+    text-align: center;
+  }
 
+  .review_star {
+    width: 170px;
+    height: 4vh;
+    background-color: hsl(300, 18%, 87%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .p_review_img {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .maincard {
+    width: 250px;
+    min-height: 20vh;
+    background: hsl(300, 43%, 22%);
+    border-radius: 8px;
+  }
+
+  footer {
+    display: none;
+  }
+
+}
+
+/* Added styles by Mishael */
+/* If you include this style you have to take out the styling on line 148*/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
